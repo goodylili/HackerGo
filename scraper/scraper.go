@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-func scrapeItOff(page int) []Information {
+func ScrapeItOff(page int) []Information {
 	info := make([]Information, 0)
 	webUrl, num := "https://news.ycombinator.com/news?p=", page
 	fullURL := fmt.Sprintf("%s%d", webUrl, num)
@@ -40,4 +40,26 @@ func selectRandom() {
 
 func selectNewsNumber() {
 
+}
+
+func Jobs() []Information {
+	info := make([]Information, 0)
+	response, _ := http.Get("https://news.ycombinator.com/jobs")
+
+	document, _ := goquery.NewDocumentFromReader(response.Body)
+
+	document.Find("tr.athing").Each(func(index int, selector *goquery.Selection) {
+		//index = 5,
+		title := selector.Find("td.title").Text()
+
+		getLink, _ := selector.Find("a.titlelink").Attr("href")
+
+		info = append(info, Information{
+			Title: title,
+			Link:  getLink,
+		})
+
+	})
+
+	return info
 }
