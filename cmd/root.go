@@ -1,37 +1,30 @@
 /*
-Package cmd
-Copyright © 2022 NAME HERE <ukejegoodness599@gmail.com>
+Copyright © 2022 NAME HERE <EMAIL ADDRESS>
 
 */
-
 package cmd
 
 import (
-	"fmt"
 	"os"
 
 	"github.com/spf13/cobra"
 )
 
+
+
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "HackerGo",
-	Short: "HackerGo is a CLI tool for getting tech news as you code without leaving your workspace",
-	Long: `
-	HackerGo is a CLI tool for getting tech news as you code without leaving your workspace
-	HackerGo gets tech news from HackerNews and other tech websites right on to your command line 
-	so you can focus on  writing code and being productive.
-	 
-	`,
-	CompletionOptions: cobra.CompletionOptions{
-		DisableDefaultCmd: true,
-	},
-	Version: "1.0.0",
+	Use:   "Hacker-Go",
+	Short: "A brief description of your application",
+	Long: `A longer description that spans multiple lines and likely contains
+examples and usage of using your application. For example:
+
+Cobra is a CLI library for Go that empowers applications.
+This application is a tool to generate the needed files
+to quickly create a Cobra application.`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("Hello CLI")
-	},
+	// Run: func(cmd *cobra.Command, args []string) { },
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
@@ -48,9 +41,11 @@ func init() {
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
 
-	// rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.HackerGo.yaml)")
+	// rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.Hacker-Go.yaml)")
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
+
+
