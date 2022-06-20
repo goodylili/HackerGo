@@ -3,7 +3,9 @@ package scraper
 import (
 	"fmt"
 	"github.com/PuerkitoBio/goquery"
+	"math/rand"
 	"net/http"
+	"time"
 )
 
 func ScrapeItOff(page int) []Information {
@@ -29,17 +31,14 @@ func ScrapeItOff(page int) []Information {
 	return info
 }
 
-func randomNewsPage(page int) {
-
-	return
+func randomNewsPage(page int) []Information {
+	rand.Seed(time.Now().UnixNano())
+	random := rand.Intn(30-1) + 1
+	return ScrapeItOff(random)
 }
 
 func selectRandom() {
 	// select
-}
-
-func selectNewsNumber() {
-
 }
 
 func Jobs() []Information {
