@@ -37,6 +37,10 @@ func randomNewsPage(page int) []Information {
 	return ScrapeItOff(random)
 }
 
+func NumberOfNewsPages(number int) {
+
+}
+
 func selectRandom() {
 	// select
 }
