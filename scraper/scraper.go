@@ -12,10 +12,8 @@ import (
 ScrapeNews Scrapes the website for other handlers to use based on the specified page
 */
 
-var Info = make([]Information, 0)
-
 func ScrapeNews(page int) []Information {
-
+	var Info = make([]Information, 0)
 	webUrl, num := "https://news.ycombinator.com/news?p=", page
 	fullURL := fmt.Sprintf("%s%d", webUrl, num)
 	response, _ := http.Get(fullURL)
@@ -46,11 +44,26 @@ func RandomNewsPage(page int) []Information {
 	return ScrapeNews(random)
 }
 
-// NumberOfNews selects news to be displayed using the random or a specified page, It just controls the number of news to be displayed/*
-func NumberOfNews(number int) {
-	for index, structs := range Info {
+// NumberOfJobs selects news to be displayed using the random or a specified page, It just controls the number of news to be displayed/*
+func NumberOfJobs(number int) {
+	jobs := ScrapeJobs()
+	for index, structs := range jobs {
 		if index <= number {
+			format := fmt.Sprintf("%s \n %s \n\n", structs.Title, structs.Link)
+			fmt.Println(format)
+		}
 
+	}
+
+}
+
+// NumberOfNews selects news to be displayed using the random or a specified page, It just controls the number of news to be displayed/*
+func NumberOfNews(pages, number int) {
+	jobs := ScrapeNews(pages)
+	for index, structs := range jobs {
+		if index <= number {
+			format := fmt.Sprintf("%s \n %s \n\n", structs.Title, structs.Link)
+			fmt.Println(format)
 		}
 
 	}
@@ -62,6 +75,7 @@ func selectRandom() {
 }
 
 func ScrapeJobs() []Information {
+	var Info = make([]Information, 0)
 	response, _ := http.Get("https://news.ycombinator.com/jobs")
 
 	document, _ := goquery.NewDocumentFromReader(response.Body)
@@ -72,7 +86,7 @@ func ScrapeJobs() []Information {
 
 		getLink, _ := selector.Find("a.titlelink").Attr("href")
 
-		info = append(info, Information{
+		Info = append(Info, Information{
 			Title: title,
 			Link:  getLink,
 		})
@@ -81,5 +95,5 @@ func ScrapeJobs() []Information {
 
 	// 31642927
 
-	return info
+	return Info
 }
