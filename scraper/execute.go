@@ -16,7 +16,7 @@ AllFromPage prints all the news in a page8
 func AllFromPage(page int) {
 	scrapePage := ScrapeNews(page)
 	for _, structs := range scrapePage {
-		format := fmt.Sprintf("%s \n %s \n\n", structs.Title, structs.Link)
+		format := fmt.Sprintf("%s \n %s\n", structs.Title, structs.Link)
 		fmt.Println(format)
 	}
 }
@@ -35,7 +35,7 @@ func NumberOfJobs(number int) {
 	jobs := ScrapeJobs()
 	for index, structs := range jobs {
 		if index <= number {
-			format := fmt.Sprintf("%s \n %s \n\n", structs.Title, structs.Link)
+			format := fmt.Sprintf("%s \n %s\n", structs.Title, structs.Link)
 			fmt.Println(format)
 		}
 
@@ -48,7 +48,7 @@ func NumberOfNews(pages, number int) {
 	jobs := ScrapeNews(pages)
 	for index, structs := range jobs {
 		if index <= number {
-			format := fmt.Sprintf("%s \n %s \n\n", structs.Title, structs.Link)
+			format := fmt.Sprintf("%s \n %s\n", structs.Title, structs.Link)
 			fmt.Println(format)
 		}
 
@@ -62,7 +62,7 @@ AllJobsFromPage returns all the jobs in the page
 func AllJobsFromPage() {
 	jobs := ScrapeJobs()
 	for _, structs := range jobs {
-		format := fmt.Sprintf("%s \n %s \n\n", structs.Title, structs.Link)
+		format := fmt.Sprintf("%s \n %s \n", structs.Title, structs.Link)
 		fmt.Println(format)
 	}
 }

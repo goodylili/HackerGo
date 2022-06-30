@@ -32,10 +32,6 @@ func ScrapeNews(page int) []Information {
 	return Info
 }
 
-func selectRandom() {
-
-}
-
 func ScrapeJobs() []Information {
 	var Info = make([]Information, 0)
 	response, _ := http.Get("https://news.ycombinator.com/jobs")
@@ -54,8 +50,6 @@ func ScrapeJobs() []Information {
 		})
 
 	})
-
-	//
 
 	return Info
 }

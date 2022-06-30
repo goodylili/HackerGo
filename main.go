@@ -1,7 +1,11 @@
 /*
-Copyright © 2022 NAME HERE <Ukejegoodness599@gmail.com>
+Copyright © 2022 NAME HERE <EMAIL ADDRESS>
 
 */
 package main
 
-func main() {}
+import "Hacker-Go/cmd"
+
+func main() {
+	cmd.Execute()
+}

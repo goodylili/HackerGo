@@ -2,8 +2,10 @@
 package cmd
 
 import (
-	"fmt"
+	"Hacker-Go/scraper"
 	"github.com/spf13/cobra"
+	"log"
+	"strconv"
 )
 
 // randomCmd.PersistentFlags().String("term", "", "A search term for a dad joke.")
@@ -19,7 +21,26 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("jobs called")
+		if len(args) < 1 {
+			log.Fatal("You didn't specify the additional arguments\nUse the --help flag for comprehensive help on how to use this tool")
+		}
+
+		if args[0] == "all" {
+			scraper.AllJobsFromPage()
+		} else {
+			numberStringConv, err := strconv.Atoi(args[0])
+			if err != nil {
+				log.Fatalln("Please specify a number from 1 - 30")
+			}
+			if numberStringConv > 30 {
+				log.Fatalln("Please specify a number from 1 - 30")
+			} else {
+				scraper.NumberOfJobs(numberStringConv)
+			}
+
+		}
+
+		//fmt.Println("jobs called")
 	},
 }
 
