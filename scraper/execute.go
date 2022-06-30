@@ -22,7 +22,7 @@ func AllFromPage(page int) {
 }
 
 /*
-RandomNewsPage
+RandomNewsPage generate a random number for the random command
 */
 func RandomNewsPage(page int) int {
 	rand.Seed(time.Now().UnixNano())
@@ -54,4 +54,15 @@ func NumberOfNews(pages, number int) {
 
 	}
 
+}
+
+/*
+AllJobsFromPage returns all the jobs in the page
+*/
+func AllJobsFromPage() {
+	jobs := ScrapeJobs()
+	for _, structs := range jobs {
+		format := fmt.Sprintf("%s \n %s \n\n", structs.Title, structs.Link)
+		fmt.Println(format)
+	}
 }

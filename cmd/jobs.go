@@ -6,6 +6,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
+// randomCmd.PersistentFlags().String("term", "", "A search term for a dad joke.")
+
 // jobsCmd represents the jobs command
 var jobsCmd = &cobra.Command{
 	Use:   "jobs",

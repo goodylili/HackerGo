@@ -33,7 +33,7 @@ func ScrapeNews(page int) []Information {
 }
 
 func selectRandom() {
-	// select
+
 }
 
 func ScrapeJobs() []Information {
