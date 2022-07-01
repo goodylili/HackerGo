@@ -37,7 +37,7 @@ $ go install github.com/Goodnessuc/HackerGo.git
 ### There are three commands, `jobs`, `page`, and  `random` (so far).
 <br>
 
-#### The `jobs` command scrapes recent jobs from the [Hacker-news website](https://news.ycombinator.com/jobs) based on the additional arguments you provide
+### The `jobs` command scrapes recent jobs from the [Hacker-news website](https://news.ycombinator.com/jobs) based on the additional arguments you provide
 
 ```
 $ HackerGo jobs  <all | integer>
