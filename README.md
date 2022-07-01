@@ -127,6 +127,7 @@ Fetching you those buzzing tech gists; This might take a while...
  $ HackerGo random <all | integer>
  ```
 <br>
+
 The  `all` argument scrapes all the news on the  page of the website.
 If you specify an integer less than 30 after the `random` command, you'll get the first "integer" news from the website.
 
