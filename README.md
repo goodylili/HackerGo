@@ -5,7 +5,7 @@ HackerGo is a CLI tool that aids developers stay productive and up-to-date with 
 You'll find HackerGo useful if you're struggling with productivity;
 You can use HackerGo to read tech news seamlessly from your CLI, and seeking for Job opportunities.
 
-You don't need to leave your IDE/Editor; The world is waiting; Keep hacking hacker 🦹🏾‍ 🦸🏼
+You don't need to leave your IDE/Editor; The world is waiting; Keep hacking; hacker, Go 🦹🏾‍ 🦸🏼
 
 ## Pre-requisites
 - [The Go SDK](https://go.dev/dl/)
