@@ -27,8 +27,9 @@ After you've cloned the repository, you can build the tool by running:
  $ go install
  ```
 - Or just install tool directly in your project.
+
 ```
-$ go install github.com/Goodnessuc/HackerGo.git
+$ go install github.com/Goodnessuc/HackerGo@latest
 ```
 
 
