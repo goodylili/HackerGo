@@ -52,8 +52,9 @@ If you specify an integer less than 30 after specifying the page, you'll get the
 
 Here's an example of the `jobs` command:
 
-```
 <br>
+
+```
 $ HackerGo jobs 5
 
 Fetching you those gigs; This might take a while...
