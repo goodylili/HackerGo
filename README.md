@@ -1,9 +1,9 @@
-# Hacker-Go
+# What's HackerGo?
 
 ### A [Golang](https://go.dev/) CLI tool built with [Cobra (& cobra-cli)](https://github.com/spf13/cobra) and .
 
 ## Pre-requisites
-- [Go SDK](https://go.dev/dl/)
+- [The Go SDK](https://go.dev/dl/)
 
 
 ## Getting started
@@ -12,7 +12,7 @@ You can decide to do one of two things:
 
 - Clone the repository
 ```
-$ git clone https://github.com/olumidayy/go-github.git
+$ git clone https://github.com/Goodnessuc/HackerGo.git
 ```
 After cloning, you can then build the tool by running:
  ```

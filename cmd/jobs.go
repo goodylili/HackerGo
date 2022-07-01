@@ -2,7 +2,7 @@
 package cmd
 
 import (
-	"Hacker-Go/scraper"
+	"HackerGo/scraper"
 	"fmt"
 	"github.com/spf13/cobra"
 	"log"

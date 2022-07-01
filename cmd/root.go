@@ -13,7 +13,7 @@ import (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "Hacker-Go",
+	Use:   "HackerGo",
 	Short: "HackerGo is a CLI tool that aids developers stay productive and up-to-date with the technology world",
 	Long: `
 	HackerGo is a CLI tool that aids developers stay productive and up-to-date with the technology world.
@@ -40,7 +40,7 @@ func init() {
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
 
-	// rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.Hacker-Go.yaml)")
+	// rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.HackerGo.yaml)")
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.

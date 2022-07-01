@@ -4,7 +4,7 @@ Copyright © 2022 NAME HERE <ukejegoodness599@gmail.com>
 */
 package main
 
-import "Hacker-Go/cmd"
+import "HackerGo/cmd"
 
 func main() {
 	cmd.Execute()

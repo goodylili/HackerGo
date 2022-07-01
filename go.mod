@@ -1,4 +1,4 @@
-module Hacker-Go
+module HackerGo
 
 go 1.18
 

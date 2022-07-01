@@ -6,7 +6,7 @@ Copyright © 2022 NAME HERE <ukejegoodness599@gmail.com>
 package cmd
 
 import (
-	"Hacker-Go/scraper"
+	"HackerGo/scraper"
 	"fmt"
 	"log"
 	"strconv"
