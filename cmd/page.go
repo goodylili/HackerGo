@@ -1,20 +1,22 @@
 /*
-Copyright © 2022 NAME HERE <EMAIL ADDRESS>
+Copyright © 2022 NAME HERE <ukejegoodness599@gmail.com>
 
 */
+
 package cmd
 
 import (
+	"HackerGo/scraper"
+	"fmt"
+	"github.com/spf13/cobra"
 	"log"
 	"strconv"
-
-	"github.com/spf13/cobra"
 )
 
 // pageCmd represents the page command
 var pageCmd = &cobra.Command{
 	Use:   "page",
-	Short: "A brief description of your command",
+	Short: "The page command scrapes the page you specify",
 	Long: `A longer description that spans multiple lines and likely contains examples
 and usage of using your command. For example:
 
@@ -22,16 +24,27 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		if len(args) < 1 {
+		if len(args) < 2 {
 			log.Fatal("You didn't specify the additional arguments\nUse the --help flag for comprehensive help on how to use this tool")
 		}
-		numberStringConv, err := strconv.Atoi(args[0])
+		firstArg, err := strconv.Atoi(args[0])
+		secondArg := args[1]
 		if err != nil {
-			log.Fatalln("Please specify a number not a string")
+			log.Fatal("You didn't specify the additional arguments\nUse the --help flag for comprehensive help on how to use this tool")
 		}
-		if numberStringConv > 30 {
-			log.Fatalln()
+
+		if err != nil && firstArg >= 30 {
+			log.Fatalln("Please specify a number as the first argument not a string remember it has to be less than 30")
 		}
+		if secondArg == "all" {
+			fmt.Println("Fetching you those buzzing tech gists; This might take a while...")
+			scraper.AllFromPage(firstArg)
+		} else {
+			fmt.Println("Fetching you those buzzing tech gists; This might take a while...")
+			secondArg, _ := strconv.Atoi(args[1])
+			scraper.NumberOfNews(firstArg, secondArg)
+		}
+
 	},
 }
 
