@@ -171,6 +171,6 @@ Here's [a tutorial I wrote](https://www.makeuseof.com/go-goquery-scrape-website/
 I'm working on a tutorial on how to build CLI apps in Go, you'll find it here and on my socials soon.
 
 ## Contributions
-Pull requests and contributions are welcome on this repository and any other repositories on my page 💙
+Pull requests and contributions are welcome on this repository, and any other repositories on my page 💙
  
  
