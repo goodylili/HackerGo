@@ -24,7 +24,7 @@ func AllFromPage(page int) {
 /*
 RandomNewsPage generate a random number for the random command
 */
-func RandomNewsPage(page int) int {
+func RandomNewsPage() int {
 	rand.Seed(time.Now().UnixNano())
 	random := rand.Intn(30-1) + 1
 	return random

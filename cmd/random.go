@@ -1,11 +1,15 @@
 /*
-Copyright © 2022 NAME HERE <EMAIL ADDRESS>
+Copyright © 2022 NAME HERE <ukejegoodness599@gmail.com>
 
 */
+
 package cmd
 
 import (
+	"Hacker-Go/scraper"
 	"fmt"
+	"log"
+	"strconv"
 
 	"github.com/spf13/cobra"
 )
@@ -13,15 +17,38 @@ import (
 // randomCmd represents the random command
 var randomCmd = &cobra.Command{
 	Use:   "random",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
+	Short: "The random command would get you news from a random page",
+	Long: `
+	The random command would get you news from a random page.
+	You can specify the number of news you want from the random page or get all the news.
+	
+	
+	all = gets all the jobs from the page 
+	int = specify a number of jobs (has to be below 30)
+	
+	`,
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("random called")
+		if len(args) < 1 {
+			log.Fatalln("You didn't specify the additional arguments\nUse the --help flag for comprehensive help on how to use this tool")
+		}
+		if args[0] == "all" {
+			fmt.Println("Fetching you those buzzing tech gists; This might take a while...")
+			scraper.AllFromPage(scraper.RandomNewsPage())
+		} else {
+			numberStringConv, err := strconv.Atoi(args[0])
+			if err != nil {
+				log.Fatalln("Please specify a number from 1 - 30")
+			}
+			if numberStringConv > 30 {
+				log.Fatalln("Please specify a number from 1 - 30")
+			} else {
+				fmt.Println("Fetching you those buzzing tech gists; This might take a while...")
+				scraper.NumberOfNews(scraper.RandomNewsPage(), numberStringConv)
+			}
+
+		}
+		//fmt.Println("random called")
 	},
 }
 
