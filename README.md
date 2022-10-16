@@ -168,7 +168,7 @@ Fetching you those buzzing tech gists; This might take a while...
 
 Here's [a tutorial I wrote](https://www.makeuseof.com/go-goquery-scrape-website/) on how to scrape websites using Goquery.
 <br>
-Check out my tutorial on (Mattermost's blog)[https://mattermost.com/blog/building-cli-applications-in-go-with-cobra/] for how you can replicate this project.
+Check out my tutorial on [Mattermost's blog](https://mattermost.com/blog/building-cli-applications-in-go-with-cobra/) for how you can replicate this project.
 
 ## Contributions
 Pull requests and contributions are welcome on this repository, and any other repositories on my page 💙
