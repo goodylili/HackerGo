@@ -9,6 +9,7 @@ You don't need to leave your IDE/Editor; The world is waiting; Keep hacking; hac
 
 ## Pre-requisites
 - [The Go SDK](https://go.dev/dl/)
+- A Go IDE or Code Editor
 - You; Yes, you!
 
 
